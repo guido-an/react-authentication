@@ -24,6 +24,7 @@ class Navbar extends Component {
                <Link to="/signup">Signup</Link>
                <Link to="/login">Login</Link>
                <Link to="/logout" onClick={this.logout}>Logout</Link>
+               <Link to='/avatar'>Avatar</Link> 
            </nav>
        )
    }
