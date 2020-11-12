@@ -13,7 +13,6 @@ const session = require('express-session')
 const Mongostore = require('connect-mongo')(session)
 const cors = require('cors')
 
-
 mongoose
   .connect('mongodb://localhost/react-auth-lesson', { useNewUrlParser: true })
   .then(x => {
@@ -41,7 +40,7 @@ app.use(session({
 app.use(cors({
   origin: ['http://localhost:3000'],
   credentials: true
- })
+})
 )
 
 app.use(bodyParser.json())

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AuthService from "../services/authService";
 
 export default class Avatar extends Component {
+  
   service = new AuthService();
 
   handleFileUpload = (e) => {
@@ -12,8 +13,10 @@ export default class Avatar extends Component {
   };
 
   render() {
+    console.log(this.props)
     return (
       <div>
+        <h1>Private page</h1>
         <form>
           <label>Avatar</label>
           <input

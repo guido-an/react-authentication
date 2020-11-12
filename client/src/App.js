@@ -6,6 +6,7 @@ import Avatar from "./components/Avatar";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import AuthService from "./services/authService";
+import ProtectedRoute from './components/ProtectedRoute'
 
 class App extends React.Component {
   state = {
@@ -52,10 +53,12 @@ class App extends React.Component {
             />
           </div>
         )}
+     
         <Switch>
-          <Route exact path="/avatar" component={Avatar} />
+          {/* <Route exact path="/avatar" component={Avatar} />    */}
+          <ProtectedRoute component={Avatar} path="/avatar" user={this.state.loggedInUser} test="test" />
+
           <Route exact path="/signup" component={Signup} />
-          {/* <Route exact path='/login' component={Login} /> */}
           <Route
             exact
             path="/login"
